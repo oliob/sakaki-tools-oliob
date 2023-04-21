@@ -54,6 +54,8 @@ src_prepare() {
 	# that is set in '/etc/portage/make.conf'
 	sed -i 's:'"/usr/portage/distfiles"':'"${porta_distdir}"':g' "${S}/genkernel.conf" || \
 		die "Failed to update busybox location"
+
+	eapply_user
 }
 
 src_install() {
