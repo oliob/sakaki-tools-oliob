@@ -39,12 +39,8 @@ src_prepare() {
 		ewarn "--no-kernel-upgrade option each time, unless you do"
 		ewarn "(otherwise, genup will fail)"
 	fi
-	if use emtee; then
-		elog "emtee USE flag selected - patching script accordingly."
-		sed -i -e 's@USE_EMTEE=false@USE_EMTEE=true@g' "${S}/${PN}" || \
-			die "Failed to patch script to reflect emtee USE flag."
-	fi
-	epatch_user
+
+	eapply_user
 }
 src_install() {
 	dosbin "${PN}"
