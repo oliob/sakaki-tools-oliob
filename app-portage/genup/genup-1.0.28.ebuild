@@ -2,30 +2,27 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
-
-inherit eutils
+EAPI=7
 
 DESCRIPTION="Update Portage tree, all installed packages, and kernel"
 BASE_SERVER_URI="https://github.com/sakaki-"
-HOMEPAGE="${BASE_SERVER_URI}/${PN}"
+HOMEPAGE="https://github.com/sakaki-/genup"
 SRC_URI="${BASE_SERVER_URI}/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc"
-IUSE="+buildkernel emtee"
+IUSE="+buildkernel"
 
 RESTRICT="mirror"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	emtee? ( >=app-portage/emtee-1.0.5 )
 	>=sys-libs/ncurses-5.9-r2
 	>=app-portage/eix-0.29.3
 	>=app-admin/perl-cleaner-2.7
 	>=app-portage/gentoolkit-0.3.0.8-r2
-	amd64? ( buildkernel? ( >=sys-kernel/buildkernel-1.0.13 ) )
+	amd64? ( buildkernel? ( >=sys-kernel/buildkernel-1.0.37 ) )
 	>=app-shells/bash-4.2"
 
 # ebuild function overrides

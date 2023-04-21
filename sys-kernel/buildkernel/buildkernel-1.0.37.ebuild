@@ -1,13 +1,11 @@
 # Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-
-inherit eutils
+EAPI=7
 
 DESCRIPTION="Build secure boot EFI kernel with LUKS, LVM and plymouth"
 BASE_SERVER_URI="https://github.com/sakaki-"
-HOMEPAGE="${BASE_SERVER_URI}/${PN}"
+HOMEPAGE="https://github.com/sakaki-"
 SRC_URI="${BASE_SERVER_URI}/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
@@ -24,7 +22,7 @@ RDEPEND="${DEPEND}
 	>=sys-libs/ncurses-5.9-r2
 	>=virtual/linux-sources-3
 	>=app-crypt/sbsigntools-0.6-r1
-	plymouth? ( >=sys-boot/plymouth-0.8.8-r4[gdm(+),libkms,pango] )
+	plymouth? ( >=sys-boot/plymouth-0.8.8-r4[gdm(+),pango] )
 	>=sys-kernel/genkernel-next-58[cryptsetup,gpg,plymouth?]
 	=app-crypt/staticgpg-1.4.16-r1
 	>=sys-boot/efibootmgr-0.5.4-r1

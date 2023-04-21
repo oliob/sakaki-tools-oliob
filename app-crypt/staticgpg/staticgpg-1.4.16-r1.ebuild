@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=7
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs
 
 ECCVER="0.2.0"
 ECCVER_GNUPG="1.4.9"
@@ -18,7 +18,7 @@ SRC_URI="mirror://gnupg/gnupg/${P/staticgpg/gnupg}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""
