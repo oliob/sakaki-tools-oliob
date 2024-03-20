@@ -26,7 +26,8 @@ RDEPEND="${DEPEND}
 	>=sys-kernel/genkernel-4.3.10
 	=app-crypt/staticgpg-1.4.16-r1
 	>=sys-boot/efibootmgr-0.5.4-r1
-	>=sys-apps/debianutils-4.9.1[installkernel(+)]"
+	>=sys-apps/debianutils-5.14-r1
+	>=sys-kernel/installkernel-25"
 
 # ebuild function overrides
 src_prepare() {
